@@ -67,6 +67,8 @@ pnpm dev
 ```
 Abre tu navegador e ingresa a la dirección local que te provee la consola (habitualmente `http://localhost:5173`).
 
+También tenemos una ruta con el despliegue en github: `https://mmitacc.github.io/solandre-fastfood/`
+
 ### 5. Compilar para producción (Build)
 Para generar los entregables estáticos optimizados y verificar que no existan errores de compilación en el tipado de TypeScript:
 ```bash

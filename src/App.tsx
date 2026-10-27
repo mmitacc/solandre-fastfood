@@ -1,4 +1,3 @@
-import React from "react";
 import { Toaster } from "sonner";
 import { BrowserRouter, Routes, Route } from "react-router";
 import MainLayout from "./layouts/MainLayout";
@@ -11,7 +10,7 @@ import KitchenOrders from "./pages/KitchenOrders";
 import DeliveryDashboard from "./pages/DeliveryDashboard";
 import RutaProtegida from "./components/RutaProtegida";
 
-function Inicio(): React.JSX.Element {
+function Inicio() {
   return (
     <div className="text-center py-16 bg-gradient-to-br from-orange-50 to-green-50 rounded-3xl p-8">
       <h2 className="text-5xl font-black text-solandre-oscuro mb-4">
@@ -31,9 +30,9 @@ function Inicio(): React.JSX.Element {
   );
 }
 
-export default function App(): React.JSX.Element {
+export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/solandre-fastfood">
       <Toaster richColors position="top-right" />
       <Routes>
         {/* RUTA INDEPENDIENTE: El login se muestra sin el Navbar ni el Footer de la app */}
