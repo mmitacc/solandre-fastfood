@@ -1,10 +1,9 @@
-import React from "react";
-import { Outlet, Link, NavLink, useNavigate } from "react-router";
+import { Outlet, Link, NavLink, useNavigate, replace } from "react-router";
 import { useAuthStore } from "../stores/useAuthStore";
 import { DICCIONARIO_ROLES } from "../constants/roles"; // ◄ Importas el diccionario
 import { toast } from "sonner";
 
-export default function MainLayout(): React.JSX.Element {
+export default function MainLayout() {
   const navigate = useNavigate();
 
   // ◄ Selectores específicos y limpios (Evitan re-renders globales)
@@ -68,9 +67,11 @@ export default function MainLayout(): React.JSX.Element {
                 </div>
                 <button
                   onClick={() => {
-                    logout();
-                    toast.success("Vuelve pronto 👋");
-                    navigate("/login");
+                    navigate("/", { replace: true });
+                    setTimeout(() => {
+                      logout();
+                      toast.success("Vuelve pronto 👋");
+                    }, 10);
                   }}
                   className="bg-red-50 hover:bg-red-100 text-red-600 p-2.5 rounded-xl text-sm font-semibold transition-colors"
                 >
