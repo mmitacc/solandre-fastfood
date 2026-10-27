@@ -7,4 +7,5 @@ export default defineConfig({
     tailwindcss(), // ◄ Primero va Tailwind
     react(), // ◄ Luego va React
   ],
+  base: "/solandre-fastfood/", // ◄ AGREGA ESTA LÍNEA EXACTA (con los slashes)
 });
