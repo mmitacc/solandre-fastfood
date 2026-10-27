@@ -1,5 +1,5 @@
 import { Toaster } from "sonner";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route, Link } from "react-router";
 import MainLayout from "./layouts/MainLayout";
 import Menu from "./pages/Menu";
 import PaginaLogin from "./pages/LoginPage";
@@ -20,12 +20,12 @@ function Inicio() {
         La velocidad del fast-food combinada con la frescura que tu cuerpo
         necesita.
       </p>
-      <a
-        href="/menu"
+      <Link
+        to="/menu"
         className="bg-solandre-naranja hover:bg-solandre-naranjaHover text-white px-8 py-4 rounded-full font-bold shadow-md inline-block transition-transform hover:scale-105"
       >
         Explorar Menú 🍔
-      </a>
+      </Link>
     </div>
   );
 }
